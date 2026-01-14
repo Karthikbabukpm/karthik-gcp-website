@@ -1,6 +1,7 @@
 ############################################################################
 ## karthik's static-gcp-website
 ############################################################################
+
 Google Cloud Storage(GCS) is used to host a static website on Google Cloud Platform(GCP).
 
 ## Overview
@@ -48,6 +49,7 @@ https://storage.googleapis.com/st_website_1/index.html
 ###################################################################
 ## What can be done with more time
 ###################################################################
+
 - I would concentrate on enhancing the website's security, automation, and maintainability if I had more time.
 - Firstly, I would use Cloud DNS to set up a custom domain rather than depending on the default Cloud Storage URL. I will configure HTTPS via a Google-managed SSL certificate on an HTTPS load balancer to ensure secure communication.
 - After that, I would incorporate a CI/CD pipeline to ensure that website modifications are automatically implemented. Every time a change is merged into the main branch, for instance, I could use GitHub Actions or Cloud Build to publish changed static files to the GCS bucket. This reduces manual effort and minimizes the chance of deployment errors.
@@ -57,7 +59,9 @@ https://storage.googleapis.com/st_website_1/index.html
 ###################################################################
 ## Alternative Solutions
 ###################################################################
+
 Before choosing Google Cloud Storage, I assessed the following GCP services.
+
 ## Firebase Hosting
 Firebase Hosting provides fast and secure hosting for web apps. It has built-in support for CDNs and HTTPS, and Google takes care of content delivery and SSL certificate administration. For static websites, this greatly lowers operational overhead. Although Firebase Hosting is an excellent choice, it was not chosen for this purpose in order to show how to leverage fundamental GCP features like Cloud Storage and IAM directly instead of depending on a higher-level managed platform.
 
@@ -70,6 +74,7 @@ Cloud Run allows us to build and deploy applications or websites quickly on a fu
 ###################################################################
 ## Production-grade - Multi-team Environment
 ###################################################################
+
 ## 1. Infrastructure as Code (IaC)
 I will use Terraform to define and manage the infrastructure, with code stored in a version-controlled repository such as Bitbucket or GitHub. This allows teams to review and approve changes via pull requests, ensuring deployments are controlled, repeatable, and auditable.
 
