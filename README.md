@@ -1,5 +1,5 @@
 ############################################################################
-# karthik's static-gcp-website
+## karthik's static-gcp-website
 ############################################################################
 
 Google Cloud Storage(GCS) is used to host a static website on Google Cloud Platform(GCP).
@@ -22,7 +22,7 @@ Google Cloud Storage was chosen for this implementation because it is:
 ## How to use GCP Console to create a static website in GCP using GCS
 ## 1. Create a Cloud Storage Bucket
 - Navigate to Google Cloud Console --> Cloud Storage --> Buckets --> Click "Create Bucket"
-- A few configurations are required under the Create Bucket section, such as globally unique bucket names. I've set up st_website_1 as the GCS Bucket Name.
+- A few configurations are required under the Create Bucket section, such as globally unique bucket names. I've set up unique_bucket_name as the GCS Bucket Name.
 - Under "Location Type." In this instance, I've chosen the Australia-Southeast1 (Sydney) area.
 - I've unchecked the "Public Access Prevention" section.
 - The other configuration remains the same.
@@ -32,19 +32,18 @@ Note: Public access is enabled for demonstration purposes only and is not recomm
 For reference, please see the index.html file that is attached.
 
 ## 3. Upload the file "index.html" to the GCS bucket
-- Go to Google Cloud Console --> Cloud Storage --> Buckets --> Click "st_website_1" (The GCS bucket that we've created in step 1)
+- Go to Google Cloud Console --> Cloud Storage --> Buckets --> Click "unique_bucket_name" (The GCS bucket that we've created in step 1)
 - Click upload files --> Upload the index.html file that we've created in step 2
 
 ### 4. Make the Website publicly accessible
-- Navigate to Google Cloud Console --> Cloud Storage --> Buckets --> Click "st_website_1 (The GCS bucket that we've created in step 1)
+- Navigate to Google Cloud Console --> Cloud Storage --> Buckets --> Click "unique_bucket_name" (The GCS bucket that we've created in step 1)
 - Select the check box beside the index.html file that we've uploaded in Step 3, and then go to "Permissions" tab
 - Navigate to Permissions --> Grant Access --> In "Add Principals", enter "allUsers" --> In Assign Roles, enter "Storage Object Viewer" --> Save the changes
 - This makes the website accessible to the general public in a read-only manner.
 
 ### 5. Verify the Website's access
 - Refresh the GCP Console
-- Navigate to Google Cloud Console --> Cloud Storage --> Buckets --> Click "st_website_1 (The GCS bucket that we've created in step 1) --> Click on the index.html that we've created in step 2 --> we'll find a Public URL as following, visit the link and verify the webpage.
-https://storage.googleapis.com/st_website_1/index.html
+- Navigate to Google Cloud Console --> Cloud Storage --> Buckets --> Click "unique_bucket_name (The GCS bucket that we've created in step 1) --> Click on the index.html that we've created in step 2 --> we'll find a Public URL, visit the link and verify the webpage.
 
 ###################################################################
 ## What can be done with more time
