@@ -1,5 +1,5 @@
 ############################################################################
-## karthik's static-gcp-website
+# karthik's static-gcp-website
 ############################################################################
 
 Google Cloud Storage(GCS) is used to host a static website on Google Cloud Platform(GCP).
