@@ -43,7 +43,7 @@ For reference, please see the index.html file that is attached.
 
 ### 5. Verify the Website's access
 - Refresh the GCP Console
-- Navigate to Google Cloud Console --> Cloud Storage --> Buckets --> Click "unique_bucket_name (The GCS bucket that we've created in step 1) --> Click on the index.html that we've created in step 2 --> we'll find a Public URL, visit the link and verify the webpage.
+- Navigate to Google Cloud Console --> Cloud Storage --> Buckets --> Click "unique_bucket_name" (The GCS bucket that we've created in step 1) --> Click on the index.html that we've created in step 2 --> we'll find a Public URL, visit the link and verify the webpage.
 
 ###################################################################
 ## What can be done with more time
@@ -79,9 +79,9 @@ I will use Terraform to define and manage the infrastructure, with code stored i
 
 ## 2. Multi-Environment Strategy (Dev/Staging/Prod)
 I would isolate environments at 3 levels: repository, Terraform workspace, and GCP project.
-Development Project: Developers can safely experiment with scripts and infrastructure changes in this project.
-Staging Project: A pre-production environment that duplicates production, allowing thorough testing before deployment.
-Production Project: The live environment where real users access the website, secured with strict access controls.
+- Development Project: Developers can safely experiment with scripts and infrastructure changes in this project.
+- Staging Project: A pre-production environment that duplicates production, allowing thorough testing before deployment.
+- Production Project: The live environment where real users access the website, secured with strict access controls.
 
 ## 3. Continuous Integration/Continuous Delivery (CI/CD)
 I will replace manual uploads with a CI/CD procedure that uses Google Cloud Build or GitHub Actions.
